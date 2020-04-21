@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Train schedule</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+    
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Firebase References -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+    <!-- Moment.js Reference -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  </head>
+  <body>
+    
+    <div class="container"></div>
+
+    
+    <div
+      class="jumbotron"
+      style="background-color: crimson; color: greenyellow;"
+    >
+      <h1 class="text-center">Train Departures</h1>
+    </div>
+
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Train Name</th>
+          <th scope="col">Destination</th>
+          <th scope="col">Frequency (min.)</th>
+          <th scope="col">Next Arrival</th>
+          <th scope="col">Min. Away</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">N E Corridor</th>
+          <td>Trenton</td>
+          <td>25</td>
+          <td>3:30 P.M.</td>
+          <td>5</td>
+          </tr>
+        <tr>
+          <th scope="row">Morrristown</th>
+          <td>Dover</td>
+          <td>15</td>
+          <td>3:55 P.M.</td>
+          <td>15</td>
+          </tr>
+        <tr>
+          <th scope="row">Keystone</th>
+          <td>MSU</td>
+          <td>45</td>
+          <td>4:00 P.M.</td>
+          <td>20</td>
+          </tr>
+        <tr>
+          <th scope="row">N W Regional</th>
+          <td>Trenton</td>
+          <td>60</td>
+          <td>4:10 P.M.</td>
+          <td>20</td>
+          </tr>
+      </tbody>
+    </table>
+
+    <div class="row">
+        <div class="col-md-12">
+          
+          <div class="card mb-4">
+            <div class="card-header">New Train</div>
+            <div class="card-body">
+  
+              <!-- Entry Form -->
+              <form>
+                <div class="form-group">
+                  <label for="Train-input">Train Name</label>
+                  <input class="form-control" id="train-name-input" placeholder="" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="Destination-input">Destination</label>
+                  <input class="form-control" id="destination-input" placeholder="" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="First-Train-Time">First Train Time</label>
+                  <input class="form-control" id="ftt-input" placeholder="military time" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="frequency-input">Train Frequency</label>
+                  <input class="form-control" id="train-frequency-input" placeholder="" type="text">
+                </div>
+                <button class="btn btn-primary float-right" id="record-btn">Submit</button>
+              </form>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  
+    <!-- JavaScript -->
+    <script src="/assets/java.js"></script>
+  </body>
+  
+</html>
